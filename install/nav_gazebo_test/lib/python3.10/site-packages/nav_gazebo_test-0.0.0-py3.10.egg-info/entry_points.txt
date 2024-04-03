@@ -1,0 +1,4 @@
+[console_scripts]
+nav_gazebo = nav_gazebo_test.nav_gazebo:main
+nav_gazebo_orig = nav_gazebo_test.nav_gazebo_orig:main
+

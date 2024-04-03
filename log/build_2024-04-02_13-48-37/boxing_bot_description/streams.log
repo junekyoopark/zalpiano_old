@@ -1,0 +1,31 @@
+[0.009s] Invoking command in '/home/john/ros2_ws/build/boxing_bot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/john/ros2_ws/install/nav_test:/home/john/ros2_ws/install/nav_gazebo_test:/opt/ros/humble /usr/bin/cmake --build /home/john/ros2_ws/build/boxing_bot_description -- -j28 -l28
+[0.223s] Invoked command in '/home/john/ros2_ws/build/boxing_bot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/john/ros2_ws/install/nav_test:/home/john/ros2_ws/install/nav_gazebo_test:/opt/ros/humble /usr/bin/cmake --build /home/john/ros2_ws/build/boxing_bot_description -- -j28 -l28
+[0.236s] Invoking command in '/home/john/ros2_ws/build/boxing_bot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/john/ros2_ws/install/nav_test:/home/john/ros2_ws/install/nav_gazebo_test:/opt/ros/humble /usr/bin/cmake --install /home/john/ros2_ws/build/boxing_bot_description
+[0.239s] -- Install configuration: ""
+[0.239s] -- Up-to-date: /home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/src
+[0.239s] -- Up-to-date: /home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/src/description
+[0.239s] -- Up-to-date: /home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/src/description/boxing_bot_description.urdf
+[0.239s] -- Up-to-date: /home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/launch
+[0.239s] -- Up-to-date: /home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/launch/world.launch.py
+[0.239s] -- Up-to-date: /home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/launch/display.launch.py
+[0.239s] -- Up-to-date: /home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/rviz
+[0.240s] -- Up-to-date: /home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/rviz/urdf_config.rviz
+[0.240s] -- Up-to-date: /home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/config
+[0.240s] -- Installing: /home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/config/ekf_continuous.yaml
+[0.240s] -- Up-to-date: /home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/config/ekf_global.yaml
+[0.240s] -- Up-to-date: /home/john/ros2_ws/install/boxing_bot_description/share/ament_index/resource_index/package_run_dependencies/boxing_bot_description
+[0.240s] -- Up-to-date: /home/john/ros2_ws/install/boxing_bot_description/share/ament_index/resource_index/parent_prefix_path/boxing_bot_description
+[0.240s] -- Up-to-date: /home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/environment/ament_prefix_path.sh
+[0.240s] -- Up-to-date: /home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/environment/ament_prefix_path.dsv
+[0.240s] -- Up-to-date: /home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/environment/path.sh
+[0.240s] -- Up-to-date: /home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/environment/path.dsv
+[0.240s] -- Up-to-date: /home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/local_setup.bash
+[0.240s] -- Up-to-date: /home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/local_setup.sh
+[0.240s] -- Up-to-date: /home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/local_setup.zsh
+[0.240s] -- Up-to-date: /home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/local_setup.dsv
+[0.240s] -- Installing: /home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/package.dsv
+[0.240s] -- Up-to-date: /home/john/ros2_ws/install/boxing_bot_description/share/ament_index/resource_index/packages/boxing_bot_description
+[0.240s] -- Up-to-date: /home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/cmake/boxing_bot_descriptionConfig.cmake
+[0.240s] -- Up-to-date: /home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/cmake/boxing_bot_descriptionConfig-version.cmake
+[0.240s] -- Up-to-date: /home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/package.xml
+[0.240s] Invoked command in '/home/john/ros2_ws/build/boxing_bot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/john/ros2_ws/install/nav_test:/home/john/ros2_ws/install/nav_gazebo_test:/opt/ros/humble /usr/bin/cmake --install /home/john/ros2_ws/build/boxing_bot_description

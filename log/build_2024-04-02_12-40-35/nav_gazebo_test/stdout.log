@@ -1,0 +1,39 @@
+running egg_info
+creating ../../build/nav_gazebo_test/nav_gazebo_test.egg-info
+writing ../../build/nav_gazebo_test/nav_gazebo_test.egg-info/PKG-INFO
+writing dependency_links to ../../build/nav_gazebo_test/nav_gazebo_test.egg-info/dependency_links.txt
+writing entry points to ../../build/nav_gazebo_test/nav_gazebo_test.egg-info/entry_points.txt
+writing requirements to ../../build/nav_gazebo_test/nav_gazebo_test.egg-info/requires.txt
+writing top-level names to ../../build/nav_gazebo_test/nav_gazebo_test.egg-info/top_level.txt
+writing manifest file '../../build/nav_gazebo_test/nav_gazebo_test.egg-info/SOURCES.txt'
+reading manifest file '../../build/nav_gazebo_test/nav_gazebo_test.egg-info/SOURCES.txt'
+writing manifest file '../../build/nav_gazebo_test/nav_gazebo_test.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/john/ros2_ws/build/nav_gazebo_test/build
+creating /home/john/ros2_ws/build/nav_gazebo_test/build/lib
+creating /home/john/ros2_ws/build/nav_gazebo_test/build/lib/nav_gazebo_test
+copying nav_gazebo_test/__init__.py -> /home/john/ros2_ws/build/nav_gazebo_test/build/lib/nav_gazebo_test
+copying nav_gazebo_test/nav_gazebo_orig.py -> /home/john/ros2_ws/build/nav_gazebo_test/build/lib/nav_gazebo_test
+copying nav_gazebo_test/nav_gazebo.py -> /home/john/ros2_ws/build/nav_gazebo_test/build/lib/nav_gazebo_test
+running install
+running install_lib
+creating /home/john/ros2_ws/install/nav_gazebo_test/lib/python3.10/site-packages/nav_gazebo_test
+copying /home/john/ros2_ws/build/nav_gazebo_test/build/lib/nav_gazebo_test/__init__.py -> /home/john/ros2_ws/install/nav_gazebo_test/lib/python3.10/site-packages/nav_gazebo_test
+copying /home/john/ros2_ws/build/nav_gazebo_test/build/lib/nav_gazebo_test/nav_gazebo_orig.py -> /home/john/ros2_ws/install/nav_gazebo_test/lib/python3.10/site-packages/nav_gazebo_test
+copying /home/john/ros2_ws/build/nav_gazebo_test/build/lib/nav_gazebo_test/nav_gazebo.py -> /home/john/ros2_ws/install/nav_gazebo_test/lib/python3.10/site-packages/nav_gazebo_test
+byte-compiling /home/john/ros2_ws/install/nav_gazebo_test/lib/python3.10/site-packages/nav_gazebo_test/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/john/ros2_ws/install/nav_gazebo_test/lib/python3.10/site-packages/nav_gazebo_test/nav_gazebo_orig.py to nav_gazebo_orig.cpython-310.pyc
+byte-compiling /home/john/ros2_ws/install/nav_gazebo_test/lib/python3.10/site-packages/nav_gazebo_test/nav_gazebo.py to nav_gazebo.cpython-310.pyc
+running install_data
+creating /home/john/ros2_ws/install/nav_gazebo_test/share/ament_index
+creating /home/john/ros2_ws/install/nav_gazebo_test/share/ament_index/resource_index
+creating /home/john/ros2_ws/install/nav_gazebo_test/share/ament_index/resource_index/packages
+copying resource/nav_gazebo_test -> /home/john/ros2_ws/install/nav_gazebo_test/share/ament_index/resource_index/packages
+copying package.xml -> /home/john/ros2_ws/install/nav_gazebo_test/share/nav_gazebo_test
+running install_egg_info
+Copying ../../build/nav_gazebo_test/nav_gazebo_test.egg-info to /home/john/ros2_ws/install/nav_gazebo_test/lib/python3.10/site-packages/nav_gazebo_test-0.0.0-py3.10.egg-info
+running install_scripts
+Installing nav_gazebo script to /home/john/ros2_ws/install/nav_gazebo_test/lib/nav_gazebo_test
+Installing nav_gazebo_orig script to /home/john/ros2_ws/install/nav_gazebo_test/lib/nav_gazebo_test
+writing list of installed files to '/home/john/ros2_ws/build/nav_gazebo_test/install.log'

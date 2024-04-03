@@ -1,0 +1,25 @@
+[0.383s] Invoking command in '/home/john/ros2_ws/src/nav_gazebo_test': PYTHONPATH=/home/john/ros2_ws/build/nav_gazebo_test/prefix_override:/home/john/ros2_ws/install/nav_gazebo_test/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/nav_gazebo_test build --build-base /home/john/ros2_ws/build/nav_gazebo_test/build install --record /home/john/ros2_ws/build/nav_gazebo_test/install.log --single-version-externally-managed install_data
+[0.481s] running egg_info
+[0.482s] writing ../../build/nav_gazebo_test/nav_gazebo_test.egg-info/PKG-INFO
+[0.482s] writing dependency_links to ../../build/nav_gazebo_test/nav_gazebo_test.egg-info/dependency_links.txt
+[0.482s] writing entry points to ../../build/nav_gazebo_test/nav_gazebo_test.egg-info/entry_points.txt
+[0.482s] writing requirements to ../../build/nav_gazebo_test/nav_gazebo_test.egg-info/requires.txt
+[0.482s] writing top-level names to ../../build/nav_gazebo_test/nav_gazebo_test.egg-info/top_level.txt
+[0.482s] reading manifest file '../../build/nav_gazebo_test/nav_gazebo_test.egg-info/SOURCES.txt'
+[0.483s] writing manifest file '../../build/nav_gazebo_test/nav_gazebo_test.egg-info/SOURCES.txt'
+[0.483s] running build
+[0.483s] running build_py
+[0.483s] copying nav_gazebo_test/nav_gazebo.py -> /home/john/ros2_ws/build/nav_gazebo_test/build/lib/nav_gazebo_test
+[0.483s] running install
+[0.483s] running install_lib
+[0.483s] copying /home/john/ros2_ws/build/nav_gazebo_test/build/lib/nav_gazebo_test/nav_gazebo.py -> /home/john/ros2_ws/install/nav_gazebo_test/lib/python3.10/site-packages/nav_gazebo_test
+[0.484s] byte-compiling /home/john/ros2_ws/install/nav_gazebo_test/lib/python3.10/site-packages/nav_gazebo_test/nav_gazebo.py to nav_gazebo.cpython-310.pyc
+[0.484s] running install_data
+[0.484s] running install_egg_info
+[0.485s] removing '/home/john/ros2_ws/install/nav_gazebo_test/lib/python3.10/site-packages/nav_gazebo_test-0.0.0-py3.10.egg-info' (and everything under it)
+[0.485s] Copying ../../build/nav_gazebo_test/nav_gazebo_test.egg-info to /home/john/ros2_ws/install/nav_gazebo_test/lib/python3.10/site-packages/nav_gazebo_test-0.0.0-py3.10.egg-info
+[0.486s] running install_scripts
+[0.495s] Installing nav_gazebo script to /home/john/ros2_ws/install/nav_gazebo_test/lib/nav_gazebo_test
+[0.495s] Installing nav_gazebo_orig script to /home/john/ros2_ws/install/nav_gazebo_test/lib/nav_gazebo_test
+[0.495s] writing list of installed files to '/home/john/ros2_ws/build/nav_gazebo_test/install.log'
+[0.509s] Invoked command in '/home/john/ros2_ws/src/nav_gazebo_test' returned '0': PYTHONPATH=/home/john/ros2_ws/build/nav_gazebo_test/prefix_override:/home/john/ros2_ws/install/nav_gazebo_test/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/nav_gazebo_test build --build-base /home/john/ros2_ws/build/nav_gazebo_test/build install --record /home/john/ros2_ws/build/nav_gazebo_test/install.log --single-version-externally-managed install_data
