@@ -1,0 +1,5 @@
+  File "/home/john/ros2_ws/install/nav_gazebo_test/lib/python3.10/site-packages/nav_gazebo_test/nav_gazebo.py", line 92
+    def apply_clahe(self.image):
+                        ^
+SyntaxError: invalid syntax
+

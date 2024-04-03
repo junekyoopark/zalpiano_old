@@ -75,7 +75,7 @@ class ArUcoDetector(Node):
         Convert 2D image points to 3D world coordinates with a known Z depth.
         """
         X = (x - cx) * constant_z / fx
-        Y = (y - cy) * constant_z / fy
+        Y = -((y - cy) * constant_z / fy)
         return X, Y, constant_z
 
     def image_callback(self, msg):

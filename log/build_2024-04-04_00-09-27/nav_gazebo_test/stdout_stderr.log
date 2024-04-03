@@ -1,0 +1,28 @@
+running egg_info
+writing ../../build/nav_gazebo_test/nav_gazebo_test.egg-info/PKG-INFO
+writing dependency_links to ../../build/nav_gazebo_test/nav_gazebo_test.egg-info/dependency_links.txt
+writing entry points to ../../build/nav_gazebo_test/nav_gazebo_test.egg-info/entry_points.txt
+writing requirements to ../../build/nav_gazebo_test/nav_gazebo_test.egg-info/requires.txt
+writing top-level names to ../../build/nav_gazebo_test/nav_gazebo_test.egg-info/top_level.txt
+reading manifest file '../../build/nav_gazebo_test/nav_gazebo_test.egg-info/SOURCES.txt'
+writing manifest file '../../build/nav_gazebo_test/nav_gazebo_test.egg-info/SOURCES.txt'
+running build
+running build_py
+copying nav_gazebo_test/nav_gazebo.py -> /home/john/ros2_ws/build/nav_gazebo_test/build/lib/nav_gazebo_test
+running install
+running install_lib
+copying /home/john/ros2_ws/build/nav_gazebo_test/build/lib/nav_gazebo_test/nav_gazebo.py -> /home/john/ros2_ws/install/nav_gazebo_test/lib/python3.10/site-packages/nav_gazebo_test
+byte-compiling /home/john/ros2_ws/install/nav_gazebo_test/lib/python3.10/site-packages/nav_gazebo_test/nav_gazebo.py to nav_gazebo.cpython-310.pyc
+running install_data
+  File "/home/john/ros2_ws/install/nav_gazebo_test/lib/python3.10/site-packages/nav_gazebo_test/nav_gazebo.py", line 92
+    def apply_clahe(self.image):
+                        ^
+SyntaxError: invalid syntax
+
+running install_egg_info
+removing '/home/john/ros2_ws/install/nav_gazebo_test/lib/python3.10/site-packages/nav_gazebo_test-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/nav_gazebo_test/nav_gazebo_test.egg-info to /home/john/ros2_ws/install/nav_gazebo_test/lib/python3.10/site-packages/nav_gazebo_test-0.0.0-py3.10.egg-info
+running install_scripts
+Installing nav_gazebo script to /home/john/ros2_ws/install/nav_gazebo_test/lib/nav_gazebo_test
+Installing nav_gazebo_orig script to /home/john/ros2_ws/install/nav_gazebo_test/lib/nav_gazebo_test
+writing list of installed files to '/home/john/ros2_ws/build/nav_gazebo_test/install.log'
