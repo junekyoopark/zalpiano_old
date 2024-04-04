@@ -27,7 +27,7 @@ cx, cy = W / 2, H / 2
 k1, k2, p1, p2, k3 = -0.25, 0.12, -0.00028, -0.00005, 0.0
 
 # Known Z depth
-constant_z = 4.85  # Assuming a constant Z value for the demonstration
+constant_z = 4.0  # Assuming a constant Z value for the demonstration
 
 class ArUcoDetector(Node):
     def __init__(self):
@@ -48,27 +48,7 @@ class ArUcoDetector(Node):
 
         # Pose publisher
         self.pose_publisher = self.create_publisher(PoseWithCovarianceStamped, '/aruco_pose_cov', 10)
-        # self.br = tf2_ros.TransformBroadcaster(self)
-
-    # def broadcast_transform(self, X, Y, Z, angle, frame_id="map", child_frame_id="aruco_marker_link"):
-    #     t = TransformStamped()
-    #     t.header.stamp = self.get_clock().now().to_msg()
-    #     t.header.frame_id = frame_id
-    #     t.child_frame_id = child_frame_id
         
-    #     t.transform.translation.x = X
-    #     t.transform.translation.y = Y
-    #     t.transform.translation.z = Z - 4.85  # Adjusting Z based on your code
-        
-    #     cy = np.cos(angle * 0.5)
-    #     sy = np.sin(angle * 0.5)
-        
-    #     t.transform.rotation.x = 0.0
-    #     t.transform.rotation.y = 0.0
-    #     t.transform.rotation.z = sy
-    #     t.transform.rotation.w = cy
-        
-    #     self.br.sendTransform(t)
 
     def image_point_to_world(self, x, y):
         """
@@ -109,7 +89,7 @@ class ArUcoDetector(Node):
                 pose_cov_msg.header.frame_id = "map"
                 pose_cov_msg.pose.pose.position.x = X 
                 pose_cov_msg.pose.pose.position.y = Y
-                pose_cov_msg.pose.pose.position.z = Z - 4.85  # Adjust Z as before
+                pose_cov_msg.pose.pose.position.z = Z - 4.0  # Adjust Z as before
                 pose_cov_msg.pose.pose.orientation.x = 0.0
                 pose_cov_msg.pose.pose.orientation.y = 0.0
                 pose_cov_msg.pose.pose.orientation.z = cy
@@ -121,8 +101,6 @@ class ArUcoDetector(Node):
                 pose_cov_msg.pose.covariance = [0.0] * 36  # 6x6 matrix flattened into an array
 
                 self.pose_publisher.publish(pose_cov_msg)
-
-                # self.broadcast_transform(X, Y, Z, angle)
 
                 position_text = f"3D Pos: ({X:.2f}, {Y:.2f}, {Z:.2f})"
                 cv2.putText(frame_undistorted, position_text, (int(center[0] + 20), int(center[1])), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 0), 2)

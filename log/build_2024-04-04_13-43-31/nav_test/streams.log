@@ -1,0 +1,20 @@
+[0.373s] Invoking command in '/home/john/ros2_ws/src/nav_test': PYTHONPATH=/home/john/ros2_ws/build/nav_test/prefix_override:/home/john/ros2_ws/install/nav_test/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/nav_test build --build-base /home/john/ros2_ws/build/nav_test/build install --record /home/john/ros2_ws/build/nav_test/install.log --single-version-externally-managed install_data
+[0.470s] running egg_info
+[0.470s] writing ../../build/nav_test/nav_test.egg-info/PKG-INFO
+[0.470s] writing dependency_links to ../../build/nav_test/nav_test.egg-info/dependency_links.txt
+[0.471s] writing entry points to ../../build/nav_test/nav_test.egg-info/entry_points.txt
+[0.471s] writing requirements to ../../build/nav_test/nav_test.egg-info/requires.txt
+[0.471s] writing top-level names to ../../build/nav_test/nav_test.egg-info/top_level.txt
+[0.471s] reading manifest file '../../build/nav_test/nav_test.egg-info/SOURCES.txt'
+[0.471s] writing manifest file '../../build/nav_test/nav_test.egg-info/SOURCES.txt'
+[0.471s] running build
+[0.471s] running build_py
+[0.471s] running install
+[0.472s] running install_lib
+[0.472s] running install_data
+[0.472s] running install_egg_info
+[0.473s] removing '/home/john/ros2_ws/install/nav_test/lib/python3.10/site-packages/nav_test-0.0.0-py3.10.egg-info' (and everything under it)
+[0.473s] Copying ../../build/nav_test/nav_test.egg-info to /home/john/ros2_ws/install/nav_test/lib/python3.10/site-packages/nav_test-0.0.0-py3.10.egg-info
+[0.473s] running install_scripts
+[0.483s] writing list of installed files to '/home/john/ros2_ws/build/nav_test/install.log'
+[0.497s] Invoked command in '/home/john/ros2_ws/src/nav_test' returned '0': PYTHONPATH=/home/john/ros2_ws/build/nav_test/prefix_override:/home/john/ros2_ws/install/nav_test/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/nav_test build --build-base /home/john/ros2_ws/build/nav_test/build install --record /home/john/ros2_ws/build/nav_test/install.log --single-version-externally-managed install_data

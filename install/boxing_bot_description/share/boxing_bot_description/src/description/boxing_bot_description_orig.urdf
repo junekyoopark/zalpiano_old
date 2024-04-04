@@ -144,7 +144,7 @@
 <!-- ArUco Marker -->
 <link name="aruco_marker_link">
   <visual>
-    <origin xyz="0 0 ${(base_height/4) + 0.0005}" rpy="0 0 0"/>
+    <origin xyz="0 0 ${(base_height/4) + 0.0005}" rpy="0 0 -1.5709"/>
     <geometry>
       <box size="0.1 0.1 0.001"/>
     </geometry>
@@ -155,7 +155,7 @@
   </visual>
 
   <collision>
-    <origin xyz="0 0 ${(base_height/4) + 0.0005}" rpy="0 0 0"/>
+    <origin xyz="0 0 ${(base_height/4) + 0.0005}" rpy="0 0 -1.5709"/>
     <geometry>
       <box size="0.1 0.1 0.001"/>
     </geometry>
@@ -167,7 +167,7 @@
 <joint name="base_to_aruco_marker" type="fixed">
   <parent link="base_link"/>
   <child link="aruco_marker_link"/>
-  <origin xyz="0 0 ${-(base_height/4) - 0.0005}" rpy="0 0 0"/>
+  <origin xyz="0 0 ${(base_height/4) + 0.0005}" rpy="0 0 -1.5709"/>
 </joint>
 
 
@@ -180,7 +180,8 @@
   <gazebo>
     <plugin name='diff_drive' filename='libgazebo_ros_diff_drive.so'>
       <ros>
-        <namespace>/demo</namespace>
+        <!-- commented out for testing-->
+        <!--<namespace>/demo</namespace>-->
       </ros>
 
       <!-- wheels -->
@@ -197,8 +198,10 @@
 
       <!-- output -->
       <publish_odom>true</publish_odom>
-      <publish_odom_tf>false</publish_odom_tf>
+      <publish_odom_tf>true</publish_odom_tf>
       <publish_wheel_tf>true</publish_wheel_tf>
+
+      <command_topic>cmd_vel</command_topic>
 
       <odometry_frame>odom</odometry_frame>
       <robot_base_frame>base_link</robot_base_frame>
