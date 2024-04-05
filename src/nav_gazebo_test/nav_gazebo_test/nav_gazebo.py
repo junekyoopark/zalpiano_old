@@ -46,8 +46,13 @@ class ArUcoDetector(Node):
                                        [0, 0, 1]])
         self.dist_coeffs = np.array([k1, k2, p1, p2, k3])
 
-        # Pose publisher
-        self.pose_publisher = self.create_publisher(PoseWithCovarianceStamped, '/aruco_pose_cov', 10)
+        # Pose publisher for each marker ID
+        self.pose_publishers = {}
+        for marker_id in range(4):  # IDs 0 to 3
+            topic_name = f'/aruco_pose_cov/marker_{marker_id}'
+            publisher = self.create_publisher(PoseWithCovarianceStamped, topic_name, 10)
+            self.pose_publishers[marker_id] = publisher
+
         
 
     def image_point_to_world(self, x, y):
@@ -60,52 +65,44 @@ class ArUcoDetector(Node):
 
     def image_callback(self, msg):
         frame = self.bridge.imgmsg_to_cv2(msg, 'bgr8')
-        
-        # Undistort the image
         frame_undistorted = cv2.undistort(frame, self.camera_matrix, self.dist_coeffs)
-
         gray = cv2.cvtColor(frame_undistorted, cv2.COLOR_BGR2GRAY)
         corners, ids, rejectedImgPoints = aruco.detectMarkers(gray, self.aruco_dict, parameters=self.aruco_params)
 
-        if ids is not None and 0 in ids:
-            index_of_id_0 = np.where(ids == 0)[0]
-            corners_of_id_0 = [corners[i] for i in index_of_id_0]
-            aruco.drawDetectedMarkers(frame_undistorted, corners_of_id_0)
+        if ids is not None:
+            for i, marker_id in enumerate(ids.flatten()):
+                if 0 <= marker_id <= 3:  # Check if the marker ID is between 0 and 3
+                    corner = corners[i]
+                    aruco.drawDetectedMarkers(frame_undistorted, [corner])
 
-            for corner in corners_of_id_0:
-                c = corner[0]
-                center = c.mean(axis=0)
-                X, Y, Z = self.image_point_to_world(center[0], center[1])
+                    c = corner[0]
+                    center = c.mean(axis=0)
+                    X, Y, Z = self.image_point_to_world(center[0], center[1])
 
-                vector = c[1] - c[0]
-                angle = np.arctan2(vector[1], vector[0])
-                cy = np.cos(angle * 0.5)
-                sy = np.sin(angle * 0.5)
+                    vector = c[1] - c[0]
+                    angle = np.arctan2(vector[1], vector[0])
+                    cy = np.cos(angle * 0.5)
+                    sy = np.sin(angle * 0.5)
 
-                # Prepare PoseWithCovarianceStamped message instead of PoseStamped
-                pose_cov_msg = PoseWithCovarianceStamped()
-                pose_cov_msg.header.stamp = self.get_clock().now().to_msg()
-                print(pose_cov_msg.header.stamp)
-                pose_cov_msg.header.frame_id = "map"
-                pose_cov_msg.pose.pose.position.x = X 
-                pose_cov_msg.pose.pose.position.y = Y
-                pose_cov_msg.pose.pose.position.z = Z - 4.0  # Adjust Z as before
-                pose_cov_msg.pose.pose.orientation.x = 0.0
-                pose_cov_msg.pose.pose.orientation.y = 0.0
-                pose_cov_msg.pose.pose.orientation.z = cy
-                pose_cov_msg.pose.pose.orientation.w = sy
+                    pose_cov_msg = PoseWithCovarianceStamped()
+                    pose_cov_msg.header.stamp = self.get_clock().now().to_msg()
+                    pose_cov_msg.header.frame_id = "map"
+                    pose_cov_msg.pose.pose.position.x = X
+                    pose_cov_msg.pose.pose.position.y = Y
+                    pose_cov_msg.pose.pose.position.z = Z - 4.0  # Adjust Z as before
+                    pose_cov_msg.pose.pose.orientation.x = 0.0
+                    pose_cov_msg.pose.pose.orientation.y = 0.0
+                    pose_cov_msg.pose.pose.orientation.z = cy
+                    pose_cov_msg.pose.pose.orientation.w = sy
 
+                    pose_cov_msg.pose.covariance = [0.0] * 36  # Initialize covariance as zero (adjust as needed)
 
-                # For covariance, you might initialize it as follows if you don't compute it specifically
-                # This example sets all values to 0, which means unknown uncertainty; adjust as needed
-                pose_cov_msg.pose.covariance = [0.0] * 36  # 6x6 matrix flattened into an array
+                    if marker_id in self.pose_publishers:
+                        self.pose_publishers[marker_id].publish(pose_cov_msg)
 
-                self.pose_publisher.publish(pose_cov_msg)
+                    position_text = f"3D Pos: ({X:.2f}, {Y:.2f}, {Z:.2f})"
+                    cv2.putText(frame_undistorted, position_text, (int(center[0] + 20), int(center[1])), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 0), 2)
 
-                position_text = f"3D Pos: ({X:.2f}, {Y:.2f}, {Z:.2f})"
-                cv2.putText(frame_undistorted, position_text, (int(center[0] + 20), int(center[1])), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 0), 2)
-
-        # Display the undistorted frame with the ArUco marker and 3D position
         cv2.imshow("ArUco Marker Detection and 3D Position", frame_undistorted)
         cv2.waitKey(1)
 

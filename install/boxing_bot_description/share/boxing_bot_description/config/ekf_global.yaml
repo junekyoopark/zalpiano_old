@@ -29,7 +29,7 @@ ekf_filter_node_global:
 #         from robot_localization! However, that instance should *not* fuse the global data.
         map_frame: map              # Defaults to "map" if unspecified
         odom_frame: odom            # Defaults to "odom" if unspecified
-        base_link_frame: aruco_marker_link  # Defaults to "base_link" ifunspecified
+        base_link_frame: aruco_marker_0_link  # Defaults to "base_link" ifunspecified
         world_frame: map           # Defaults to the value ofodom_frame if unspecified
 
         # odom0: demo/odom
@@ -39,7 +39,7 @@ ekf_filter_node_global:
         #                false, false, true,
         #                false, false, false]
 
-        pose0: aruco_pose_cov
+        pose0: aruco_pose_cov/marker_0
         pose0_config: [true, true, true,
                         false, false, true,
                         false, false, false,

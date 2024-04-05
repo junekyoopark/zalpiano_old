@@ -4,7 +4,10 @@
 /home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/launch/display.launch.py
 /home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/rviz/urdf_config.rviz
 /home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/config/ekf_continuous.yaml
-/home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/config/ekf_global.yaml
+/home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/config/ekf_aruco_0.yaml
+/home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/config/ekf_aruco_3.yaml
+/home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/config/ekf_aruco_2.yaml
+/home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/config/ekf_aruco_1.yaml
 /home/john/ros2_ws/install/boxing_bot_description/share/ament_index/resource_index/package_run_dependencies/boxing_bot_description
 /home/john/ros2_ws/install/boxing_bot_description/share/ament_index/resource_index/parent_prefix_path/boxing_bot_description
 /home/john/ros2_ws/install/boxing_bot_description/share/boxing_bot_description/environment/ament_prefix_path.sh

@@ -56,13 +56,38 @@ def generate_launch_description():
     )
 
 
-    robot_localization_node_global = launch_ros.actions.Node(
+    robot_localization_node_aruco_0 = launch_ros.actions.Node(
         package='robot_localization',
         executable='ekf_node',
-        name='ekf_filter_node_global',
+        name='ekf_filter_node_aruco_0',
         output='screen',
-        parameters=[os.path.join(pkg_share, 'config/ekf_global.yaml'), {'use_sim_time': True}]
+        parameters=[os.path.join(pkg_share, 'config/ekf_aruco_0.yaml'), {'use_sim_time': True}]
     )
+
+    robot_localization_node_aruco_1 = launch_ros.actions.Node(
+        package='robot_localization',
+        executable='ekf_node',
+        name='ekf_filter_node_aruco_1',
+        output='screen',
+        parameters=[os.path.join(pkg_share, 'config/ekf_aruco_1.yaml'), {'use_sim_time': True}]
+    )
+
+    robot_localization_node_aruco_2 = launch_ros.actions.Node(
+        package='robot_localization',
+        executable='ekf_node',
+        name='ekf_filter_node_aruco_2',
+        output='screen',
+        parameters=[os.path.join(pkg_share, 'config/ekf_aruco_2.yaml'), {'use_sim_time': True}]
+    )
+
+    robot_localization_node_aruco_3 = launch_ros.actions.Node(
+        package='robot_localization',
+        executable='ekf_node',
+        name='ekf_filter_node_aruco_3',
+        output='screen',
+        parameters=[os.path.join(pkg_share, 'config/ekf_aruco_3.yaml'), {'use_sim_time': True}]
+    )
+
 
     # Nav2 Map Server Node
     map_server_node = launch_ros.actions.Node(
@@ -106,7 +131,10 @@ def generate_launch_description():
         spawn_entity,
         map_server_node,
         robot_localization_node_continuous,
-        robot_localization_node_global,
+        robot_localization_node_aruco_0,
+        robot_localization_node_aruco_1,
+        robot_localization_node_aruco_2,
+        robot_localization_node_aruco_3,
         rviz_node,
         nav_gazebo_test_node
     ])

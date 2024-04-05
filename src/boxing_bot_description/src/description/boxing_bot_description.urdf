@@ -198,14 +198,43 @@
 
 
 
-<!-- ArUco Marker -->
-<link name="aruco_marker_link">
+<!-- ArUco Marker 0 -->
+<link name="aruco_marker_0_link">
   <visual>
     <origin xyz="0 0 0.001" rpy="0 0 -1.5709"/>
     <geometry>
-      <box size="0.1 0.1 0.001"/>
+      <box size="0.09 0.09 0.001"/>
     </geometry>
-    <material name="Marker">
+    <material name="Aruco0">
+      <!-- color for RVIZ-->
+      <color rgba="1 1 0 1"/>
+    </material>
+  </visual>
+
+  <collision>
+    <origin xyz="0 0 0.001" rpy="0 0 -1.5709"/>
+    <geometry>
+      <box size="0.09 0.09 0.001"/>
+    </geometry>
+  </collision>
+
+  <xacro:box_inertia m="0.1" w="0.09" d="0.09" h="0.001"/>
+</link>
+
+<joint name="base_to_aruco_marker_0" type="fixed">
+  <parent link="base_link"/>
+  <child link="aruco_marker_0_link"/>
+  <origin xyz="0.1 0 ${(base_height)/2 +(upper_body_height)}" rpy="0 0 -1.5709"/>
+</joint>
+
+<!-- ArUco Marker 1 -->
+<link name="aruco_marker_1_link">
+  <visual>
+    <origin xyz="0 0 0.001" rpy="0 0 -1.5709"/>
+    <geometry>
+      <box size="0.09 0.09 0.001"/>
+    </geometry>
+    <material name="Aruco1">
       <!-- color for RVIZ-->
       <color rgba="1 0 0 1"/>
     </material>
@@ -214,22 +243,76 @@
   <collision>
     <origin xyz="0 0 0.001" rpy="0 0 -1.5709"/>
     <geometry>
-      <box size="0.1 0.1 0.001"/>
+      <box size="0.09 0.09 0.001"/>
     </geometry>
   </collision>
 
-  <xacro:box_inertia m="0.1" w="0.1" d="0.1" h="0.001"/>
+  <xacro:box_inertia m="0.1" w="0.09" d="0.09" h="0.001"/>
 </link>
 
-<joint name="base_to_aruco_marker" type="fixed">
+<joint name="base_to_aruco_marker_1" type="fixed">
   <parent link="base_link"/>
-  <child link="aruco_marker_link"/>
-  <origin xyz="0 0 ${(base_height)/2 +(upper_body_height)}" rpy="0 0 -1.5709"/>
+  <child link="aruco_marker_1_link"/>
+  <origin xyz="0 0.1 ${(base_height)/2 +(upper_body_height)}" rpy="0 0 -1.5709"/>
 </joint>
 
+<!-- ArUco Marker 2 -->
+<link name="aruco_marker_2_link">
+  <visual>
+    <origin xyz="0 0 0.001" rpy="0 0 -1.5709"/>
+    <geometry>
+      <box size="0.09 0.09 0.001"/>
+    </geometry>
+    <material name="Aruco2">
+      <!-- color for RVIZ-->
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
 
+  <collision>
+    <origin xyz="0 0 0.001" rpy="0 0 -1.5709"/>
+    <geometry>
+      <box size="0.09 0.09 0.001"/>
+    </geometry>
+  </collision>
 
+  <xacro:box_inertia m="0.1" w="0.09" d="0.09" h="0.001"/>
+</link>
 
+<joint name="base_to_aruco_marker_2" type="fixed">
+  <parent link="base_link"/>
+  <child link="aruco_marker_2_link"/>
+  <origin xyz="-0.1 0 ${(base_height)/2 +(upper_body_height)}" rpy="0 0 -1.5709"/>
+</joint>
+
+<!-- ArUco Marker 3 -->
+<link name="aruco_marker_3_link">
+  <visual>
+    <origin xyz="0 0 0.001" rpy="0 0 -1.5709"/>
+    <geometry>
+      <box size="0.09 0.09 0.001"/>
+    </geometry>
+    <material name="Aruco3">
+      <!-- color for RVIZ-->
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+
+  <collision>
+    <origin xyz="0 0 0.001" rpy="0 0 -1.5709"/>
+    <geometry>
+      <box size="0.09 0.09 0.001"/>
+    </geometry>
+  </collision>
+
+  <xacro:box_inertia m="0.1" w="0.09" d="0.09" h="0.001"/>
+</link>
+
+<joint name="base_to_aruco_marker_3" type="fixed">
+  <parent link="base_link"/>
+  <child link="aruco_marker_3_link"/>
+  <origin xyz="0 -0.1 ${(base_height)/2 +(upper_body_height)}" rpy="0 0 -1.5709"/>
+</joint>
 
 
 
@@ -269,17 +352,50 @@
     <material>Gazebo/Green</material>
   </gazebo>
 
-  <gazebo reference="aruco_marker_link">
+  <!-- Texture for Gazebo -->
+
+  <gazebo reference="aruco_marker_0_link">
     <visual>
       <material>
         <script>
-          <uri>model://aruco_marker/materials/textures/</uri>
-          <name>Marker</name>
+          <uri>model://aruco_marker_0/materials/textures/</uri>
+          <name>Aruco0</name>
         </script>
       </material>
     </visual>
   </gazebo>
 
+  <gazebo reference="aruco_marker_1_link">
+    <visual>
+      <material>
+        <script>
+          <uri>model://aruco_marker_1/materials/textures/</uri>
+          <name>Aruco1</name>
+        </script>
+      </material>
+    </visual>
+  </gazebo>
 
+  <gazebo reference="aruco_marker_2_link">
+    <visual>
+      <material>
+        <script>
+          <uri>model://aruco_marker_2/materials/textures/</uri>
+          <name>Aruco2</name>
+        </script>
+      </material>
+    </visual>
+  </gazebo>
+
+  <gazebo reference="aruco_marker_3_link">
+    <visual>
+      <material>
+        <script>
+          <uri>model://aruco_marker_3/materials/textures/</uri>
+          <name>Aruco3</name>
+        </script>
+      </material>
+    </visual>
+  </gazebo>
 
 </robot>
