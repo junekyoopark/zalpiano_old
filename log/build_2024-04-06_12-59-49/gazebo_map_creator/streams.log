@@ -1,0 +1,29 @@
+[0.005s] Invoking command in '/home/john/ros2_ws/build/gazebo_map_creator': CMAKE_PREFIX_PATH=/home/john/ros2_ws/install/gazebo_map_creator_interface:/home/john/ros2_ws/install/gazebo_map_creator:/home/john/ros2_ws/install/boxing_bot_description:/home/john/ros2_ws/install/nav_test:/home/john/ros2_ws/install/nav_gazebo_test:/opt/ros/humble LD_LIBRARY_PATH=/home/john/ros2_ws/install/gazebo_map_creator_interface/lib:/home/john/ros2_ws/install/gazebo_map_creator/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-11.8/lib64 /usr/bin/cmake --build /home/john/ros2_ws/build/gazebo_map_creator -- -j28 -l28
+[0.039s] [100%] Built target gazebo_map_creator
+[0.044s] Invoked command in '/home/john/ros2_ws/build/gazebo_map_creator' returned '0': CMAKE_PREFIX_PATH=/home/john/ros2_ws/install/gazebo_map_creator_interface:/home/john/ros2_ws/install/gazebo_map_creator:/home/john/ros2_ws/install/boxing_bot_description:/home/john/ros2_ws/install/nav_test:/home/john/ros2_ws/install/nav_gazebo_test:/opt/ros/humble LD_LIBRARY_PATH=/home/john/ros2_ws/install/gazebo_map_creator_interface/lib:/home/john/ros2_ws/install/gazebo_map_creator/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-11.8/lib64 /usr/bin/cmake --build /home/john/ros2_ws/build/gazebo_map_creator -- -j28 -l28
+[0.056s] Invoking command in '/home/john/ros2_ws/build/gazebo_map_creator': CMAKE_PREFIX_PATH=/home/john/ros2_ws/install/gazebo_map_creator_interface:/home/john/ros2_ws/install/gazebo_map_creator:/home/john/ros2_ws/install/boxing_bot_description:/home/john/ros2_ws/install/nav_test:/home/john/ros2_ws/install/nav_gazebo_test:/opt/ros/humble LD_LIBRARY_PATH=/home/john/ros2_ws/install/gazebo_map_creator_interface/lib:/home/john/ros2_ws/install/gazebo_map_creator/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-11.8/lib64 /usr/bin/cmake --install /home/john/ros2_ws/build/gazebo_map_creator
+[0.059s] -- Install configuration: ""
+[0.059s] -- Up-to-date: /home/john/ros2_ws/install/gazebo_map_creator/share/gazebo_map_creator/environment/library_path.sh
+[0.059s] -- Up-to-date: /home/john/ros2_ws/install/gazebo_map_creator/share/gazebo_map_creator/environment/library_path.dsv
+[0.059s] -- Up-to-date: /home/john/ros2_ws/install/gazebo_map_creator/share/gazebo_map_creator/scripts
+[0.059s] -- Up-to-date: /home/john/ros2_ws/install/gazebo_map_creator/share/gazebo_map_creator/scripts/request_map.py
+[0.059s] -- Up-to-date: /home/john/ros2_ws/install/gazebo_map_creator/lib/libgazebo_map_creator.so
+[0.059s] -- Up-to-date: /home/john/ros2_ws/install/gazebo_map_creator/lib/gazebo_map_creator/request_map.py
+[0.060s] -- Up-to-date: /home/john/ros2_ws/install/gazebo_map_creator/share/ament_index/resource_index/package_run_dependencies/gazebo_map_creator
+[0.060s] -- Up-to-date: /home/john/ros2_ws/install/gazebo_map_creator/share/ament_index/resource_index/parent_prefix_path/gazebo_map_creator
+[0.060s] -- Up-to-date: /home/john/ros2_ws/install/gazebo_map_creator/share/gazebo_map_creator/environment/ament_prefix_path.sh
+[0.060s] -- Up-to-date: /home/john/ros2_ws/install/gazebo_map_creator/share/gazebo_map_creator/environment/ament_prefix_path.dsv
+[0.060s] -- Up-to-date: /home/john/ros2_ws/install/gazebo_map_creator/share/gazebo_map_creator/environment/path.sh
+[0.060s] -- Up-to-date: /home/john/ros2_ws/install/gazebo_map_creator/share/gazebo_map_creator/environment/path.dsv
+[0.060s] -- Up-to-date: /home/john/ros2_ws/install/gazebo_map_creator/share/gazebo_map_creator/local_setup.bash
+[0.060s] -- Up-to-date: /home/john/ros2_ws/install/gazebo_map_creator/share/gazebo_map_creator/local_setup.sh
+[0.060s] -- Up-to-date: /home/john/ros2_ws/install/gazebo_map_creator/share/gazebo_map_creator/local_setup.zsh
+[0.060s] -- Up-to-date: /home/john/ros2_ws/install/gazebo_map_creator/share/gazebo_map_creator/local_setup.dsv
+[0.060s] -- Installing: /home/john/ros2_ws/install/gazebo_map_creator/share/gazebo_map_creator/package.dsv
+[0.060s] -- Up-to-date: /home/john/ros2_ws/install/gazebo_map_creator/share/ament_index/resource_index/packages/gazebo_map_creator
+[0.060s] -- Up-to-date: /home/john/ros2_ws/install/gazebo_map_creator/share/gazebo_map_creator/cmake/ament_cmake_export_libraries-extras.cmake
+[0.060s] -- Up-to-date: /home/john/ros2_ws/install/gazebo_map_creator/share/gazebo_map_creator/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.060s] -- Up-to-date: /home/john/ros2_ws/install/gazebo_map_creator/share/gazebo_map_creator/cmake/gazebo_map_creatorConfig.cmake
+[0.060s] -- Up-to-date: /home/john/ros2_ws/install/gazebo_map_creator/share/gazebo_map_creator/cmake/gazebo_map_creatorConfig-version.cmake
+[0.060s] -- Up-to-date: /home/john/ros2_ws/install/gazebo_map_creator/share/gazebo_map_creator/package.xml
+[0.061s] Invoked command in '/home/john/ros2_ws/build/gazebo_map_creator' returned '0': CMAKE_PREFIX_PATH=/home/john/ros2_ws/install/gazebo_map_creator_interface:/home/john/ros2_ws/install/gazebo_map_creator:/home/john/ros2_ws/install/boxing_bot_description:/home/john/ros2_ws/install/nav_test:/home/john/ros2_ws/install/nav_gazebo_test:/opt/ros/humble LD_LIBRARY_PATH=/home/john/ros2_ws/install/gazebo_map_creator_interface/lib:/home/john/ros2_ws/install/gazebo_map_creator/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-11.8/lib64 /usr/bin/cmake --install /home/john/ros2_ws/build/gazebo_map_creator

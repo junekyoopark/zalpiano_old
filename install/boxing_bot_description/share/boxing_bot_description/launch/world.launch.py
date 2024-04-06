@@ -130,11 +130,11 @@ def generate_launch_description():
         gazebo_process,  # Ensure this is added to the launch description
         spawn_entity,
         map_server_node,
-        robot_localization_node_continuous,
         robot_localization_node_aruco_0,
-        robot_localization_node_aruco_1,
-        robot_localization_node_aruco_2,
-        robot_localization_node_aruco_3,
+        # robot_localization_node_aruco_1,
+        # robot_localization_node_aruco_2,
+        # robot_localization_node_aruco_3,
+        robot_localization_node_continuous,
         rviz_node,
         nav_gazebo_test_node
     ])

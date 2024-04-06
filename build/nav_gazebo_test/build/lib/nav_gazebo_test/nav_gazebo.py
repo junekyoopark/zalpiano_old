@@ -89,18 +89,18 @@ class ArUcoDetector(Node):
                     pose_cov_msg.header.frame_id = "map"
                     pose_cov_msg.pose.pose.position.x = X
                     pose_cov_msg.pose.pose.position.y = Y
-                    pose_cov_msg.pose.pose.position.z = Z - 4.0  # Adjust Z as before
+                    pose_cov_msg.pose.pose.position.z = Z # Adjust Z as before
                     pose_cov_msg.pose.pose.orientation.x = 0.0
                     pose_cov_msg.pose.pose.orientation.y = 0.0
-                    pose_cov_msg.pose.pose.orientation.z = cy
-                    pose_cov_msg.pose.pose.orientation.w = sy
+                    pose_cov_msg.pose.pose.orientation.z = -cy
+                    pose_cov_msg.pose.pose.orientation.w = -sy
 
                     pose_cov_msg.pose.covariance = [0.0] * 36  # Initialize covariance as zero (adjust as needed)
 
                     if marker_id in self.pose_publishers:
                         self.pose_publishers[marker_id].publish(pose_cov_msg)
 
-                    position_text = f"3D Pos: ({X:.2f}, {Y:.2f}, {Z:.2f})"
+                    position_text = f"3D Pos: ({X:.2f}, {Y:.2f}, {cy:.2f})"
                     cv2.putText(frame_undistorted, position_text, (int(center[0] + 20), int(center[1])), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 0), 2)
 
         cv2.imshow("ArUco Marker Detection and 3D Position", frame_undistorted)
